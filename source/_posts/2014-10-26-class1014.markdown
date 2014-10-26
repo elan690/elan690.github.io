@@ -9,30 +9,35 @@ categories:
 ##Markdown and Ruby##
 
 ###fork 的用途###
-一般不會隨意開放給大家commit，所以有三種方法:
-    1. watch
-    2. star - 如同like功能
-    3. fork - 如同copy功能
-*的意思: 自己去展開目前此位置所有符合條件的檔名
+一般不會隨意開放給大家commit，所以有三種方法:  
+1. watch  
+2. star - 如同like功能  
+3. fork - 如同copy功能  
+*的意思: 自己去展開目前此位置所有符合條件的檔名  
 HEAD ： 是指目前所在的位置，所以目前checkout 在哪裡就會是HEAD到那個地方
-Work永遠會是指最新的變動下的branch ; 而如果追溯到較早的位置時，HEAD就會跟著變動到那個位置。
-所以打git diff會知道要和誰比的原因 就是跟HEAD比較
+Work永遠會是指最新的變動下的branch ; 而如果追溯到較早的位置時，HEAD就會跟著變動到那個位置。 所以打git diff會知道要和誰比的原因 就是跟HEAD比較  
 
-git checkout 'commit編號' -->確認在某個時間點上專案的變動，只是將HEAD帶到那個位置
-git reset 'commit編號' -->則會還原到那commit的狀態，則在之後發生的commit就會都不見
+##比較checkout and reset##
+*git checkout 'commit編號' -->確認在某個時間點上專案的變動，只是將HEAD帶到那個位置
+
+*git reset 'commit編號' -->則會還原到那commit的狀態，則在之後發生的commit就會都不見
 (只要記得commit的值，還是回得去，但如果忘記commit的值，則就無法追溯回去那個點)
-git reset “commit 值” --hard
-<如果沒有 –hard?>
+
+*git reset “commit 值” --hard
+*<如果沒有 –hard?>
+
 有-- hard：直接還原到想要的位置，commit的位置，歷史會比較乾淨
 沒有--hard : 則會將之前修改過得紀錄顯示為還原位置的狀態（working directly） ; 如果覺得有所疑慮，可以再去檢視內容
 
 
 
--ctrl c -->  直接關掉視窗
+-ctrl c -->  直接關掉視窗 
 -ctrl z --> 保留視窗的工作
 -fg (前景視窗)
 -gitk-->開啟GUI形式的git log 
 -tag : head 可以找到歷史的某個commit點，作標籤
+
+
 ###tag /Checkout 的比較###
 -git branch（找到所有的分枝）
 -git tag （找到所有的標籤）
