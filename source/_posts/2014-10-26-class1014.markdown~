@@ -10,9 +10,9 @@ categories:
 
 ###fork 的用途###
 一般不會隨意開放給大家commit，所以有三種方法:
-1. watch
-2. star - 如同like功能
-3. fork - 如同copy功能
+1. watch  
+2. star - 如同like功能  
+3. fork - 如同copy功能  
 
 *的意思: 自己去展開目前此位置所有符合條件的檔名
 HEAD ： 是指目前所在的位置，所以目前checkout 在哪裡就會是HEAD到那個地方
