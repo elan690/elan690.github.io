@@ -9,11 +9,11 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="SaaS1014_class4 Markdown and Ruby fork 的用途 一般不會隨意開放給大家commit，所以有三種方法:
+  <meta name="description" content="SaaS1014_class4_note Markdown and Ruby fork 的用途 一般不會隨意開放給大家commit，所以有三種方法:
 1. watch
 2. star - 如同like功能
-3. fork - 如同copy功能 *的意思: 自己去展開目前此位置所有符合條件的檔名
-HEAD &hellip;">
+3. fork - 如同copy功能
+*的意思: 自己去展開目前此位置所有符合條件的檔名 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,28 +91,31 @@ HEAD &hellip;">
   </header>
 
 
-  <div class="entry-content"><h1>SaaS1014_class4</h1>
+  <div class="entry-content"><h1>SaaS1014_class4_note</h1>
 
 <h2>Markdown and Ruby</h2>
 
 <h3>fork 的用途</h3>
 
-<p>一般不會隨意開放給大家commit，所以有三種方法:
-1. watch
-2. star - 如同like功能
-3. fork - 如同copy功能</p>
-
-<p>*的意思: 自己去展開目前此位置所有符合條件的檔名
+<p>一般不會隨意開放給大家commit，所以有三種方法:<br/>
+1. watch<br/>
+2. star - 如同like功能<br/>
+3. fork - 如同copy功能<br/>
+*的意思: 自己去展開目前此位置所有符合條件的檔名<br/>
 HEAD ： 是指目前所在的位置，所以目前checkout 在哪裡就會是HEAD到那個地方
-Work永遠會是指最新的變動下的branch ; 而如果追溯到較早的位置時，HEAD就會跟著變動到那個位置。
-所以打git diff會知道要和誰比的原因 就是跟HEAD比較</p>
+Work永遠會是指最新的變動下的branch ; 而如果追溯到較早的位置時，HEAD就會跟著變動到那個位置。 所以打git diff會知道要和誰比的原因 就是跟HEAD比較</p>
 
-<p>git checkout &lsquo;commit編號&rsquo; &ndash;>確認在某個時間點上專案的變動，只是將HEAD帶到那個位置
-git reset &lsquo;commit編號&rsquo; &ndash;>則會還原到那commit的狀態，則在之後發生的commit就會都不見
-(只要記得commit的值，還是回得去，但如果忘記commit的值，則就無法追溯回去那個點)
-git reset “commit 值” &ndash;hard
-&lt;如果沒有 –hard?>
-有&ndash; hard：直接還原到想要的位置，commit的位置，歷史會比較乾淨
+<h2>比較checkout and reset</h2>
+
+<p>*git checkout &lsquo;commit編號&rsquo; &ndash;>確認在某個時間點上專案的變動，只是將HEAD帶到那個位置</p>
+
+<p>*git reset &lsquo;commit編號&rsquo; &ndash;>則會還原到那commit的狀態，則在之後發生的commit就會都不見
+(只要記得commit的值，還是回得去，但如果忘記commit的值，則就無法追溯回去那個點)</p>
+
+<p><em>git reset “commit 值” &ndash;hard
+</em>&lt;如果沒有 –hard?></p>
+
+<p>有&ndash; hard：直接還原到想要的位置，commit的位置，歷史會比較乾淨
 沒有&ndash;hard : 則會將之前修改過得紀錄顯示為還原位置的狀態（working directly） ; 如果覺得有所疑慮，可以再去檢視內容</p>
 
 <p>-ctrl c &ndash;>  直接關掉視窗
