@@ -1,0 +1,70 @@
+---
+layout: post
+title: "class1014"
+date: 2014-10-26 16:09:57 +0800
+comments: true
+categories: 
+---
+#SaaS1014_class4#
+##Markdown and Ruby##
+
+###fork 的用途###
+一般不會隨意開放給大家commit，所以有三種方法:
+1. watch
+2. star - 如同like功能
+3. fork - 如同copy功能
+
+*的意思: 自己去展開目前此位置所有符合條件的檔名
+HEAD ： 是指目前所在的位置，所以目前checkout 在哪裡就會是HEAD到那個地方
+Work永遠會是指最新的變動下的branch ; 而如果追溯到較早的位置時，HEAD就會跟著變動到那個位置。
+所以打git diff會知道要和誰比的原因 就是跟HEAD比較
+
+git checkout 'commit編號' -->確認在某個時間點上專案的變動，只是將HEAD帶到那個位置
+git reset 'commit編號' -->則會還原到那commit的狀態，則在之後發生的commit就會都不見
+(只要記得commit的值，還是回得去，但如果忘記commit的值，則就無法追溯回去那個點)
+git reset “commit 值” --hard
+<如果沒有 –hard?>
+有-- hard：直接還原到想要的位置，commit的位置，歷史會比較乾淨
+沒有--hard : 則會將之前修改過得紀錄顯示為還原位置的狀態（working directly） ; 如果覺得有所疑慮，可以再去檢視內容
+
+
+
+ctrl c -->  直接關掉視窗
+ctrl z --> 保留視窗的工作
+fg (前景視窗)
+gitk-->開啟GUI形式的git log 
+tag : head 可以找到歷史的某個commit點，作標籤
+tag /Checkout 的比較
+git branch（找到所有的分枝）
+git tag （找到所有的標籤）
+git  checkout 到過去的某個點（HEAD也會跟這帶到那個點）
+rebase (先不要用！)
+git revert(回覆歷史中commit 的某個動作
+-->會直接作和上一步相反的動作, 且自動產生一個commit ; 和reset的不同在於 reset是往前還原上一步驟，但向後追溯的歷史是不會被保留的 ; 但revert是可以作為保留參考的步驟
+git remote
+列出現在所有remote的位置
+git remote -v (則會出現完整的網址)
+如果從遠端clone下來的專案，remote則會出現原先的網址
+
+git pull /fetch
+ git branch -a (會顯示出所有的branch  包含遠端的電腦)
+若只打fetch 則只會和遠端的電腦同步;若打pull則會同時同步兩台電腦
+
+如果遠端與手邊電腦的commit紀錄是不相同的話，可以先將手變得commit放到另一個branch，然後將自己的master刪除，若打 git branch -a （會出現新的branch 和遠端的master) ，則打git pull則會自動拉下所有遠端電腦的master (則自動同步)（TBC）
+
+如果兩邊都有作發展，若merge的話就會自動在產生一個commit(稱為 'git merge master')
+fast forward : (會自己reply: 圖形顯示是直線merge)
+un fast forward : (會有一個新的commit)
+git merge mason --no--ff (強制不只reply 還要產生commit)
+git branch -b mason (-b : 產生一個新的branch 並且直接checkout 過去)
+（-D -d的差異：-d只有在merge的時候 才會生效 ; 但-D則是不論有沒有merge，都可直接刪除）
+
+
+irb(可以在上面直接執行)
+1. touch ex01.rb
+2. nano ex01.rb(編輯與存檔)
+ruby一定開頭要用puts/prints
+3. cat  ex01.rb (可以看裡面的程式碼)
+4. ruby ex01.rb（可以看到結果）
+
+
